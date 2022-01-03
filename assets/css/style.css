@@ -1,3 +1,4 @@
+
 /*
 Theme Name: Grid Produtos
 Theme URI: https://kenzie.com.br/
@@ -6,7 +7,6 @@ Author URI: https://kenzie.com.br/
 Description: Descrção do thema.
 Version: 1.0
 Text Domain: https://kenzie.com.br/
-
 --------------------------------------------
 ESTRUTURAÇÃO BASE
 --------------------------------------------
@@ -70,6 +70,184 @@ header{
     }
     header .col-flex.logo h1{
        color: #fff;
+       margin-left:2rem;
+       cursor:pointer;
+    }
+    header .col-flex.menu{
+
+    }
+        header .col-flex.menu ul{
+            display: none;
+        }
+            header .col-flex.menu ul li{
+               
+            }
+                header .col-flex.menu ul li a{ 
+                  color: #fff;
+                  text-decoration: none;
+                  padding: 10px 20px;
+                  font-size: 18px;
+                }
+                header .col-flex.menu ul li:last-child a{
+                    background-color:#39b700;
+                    text-transform: uppercase;
+                }
+                header .col-flex.menu ul li a:hover{
+                    background-color: #fff;
+                    color:#000;
+                    transition: 0.1s;
+                }
+                header div.menuMobil{
+                    display:flex;
+                    position:relative;
+                    color:#ffffff;
+                }
+                header div.menuMobil i.fa-bars{
+                    font-size:2rem;
+                    position: fixed;
+                    top:2rem;
+                    right:2rem;
+                    cursor:pointer;
+                }
+
+main.container, .lanca {
+    margin-top:6rem;
+}
+ li.produto{
+    background: rgb(255, 255, 255);
+    width: 296px;
+    box-shadow: rgb(0 0 0 / 20%) 0px 2px 6px;
+    padding: 15px 15px 65px 15px;
+    position: relative;
+}
+ span.produto_desconto{
+    background-color: #39b701;
+    color: #fff;
+    padding: 3px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    float: right;
+}
+ul.produtos_lista figure img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+figcaption{
+    display:none;
+}
+.produtos .produtos_lista h2{
+    font-size: 16px;
+    font-weight: 100;
+    color: #535353;
+}
+div.produto_avaliacao span{
+    display: inline-block;
+    position: relative;
+    width: 0;
+    height: 0;
+    border-left: calc(10px/2) solid transparent;
+    border-right: calc(10px/2) solid transparent;
+    border-bottom: 10px solid #666666;
+    top: calc(10px/-6);
+
+}
+div.produto_avaliacao span::before{
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: calc(10px/2) solid transparent;
+    border-right: calc(10px/2) solid transparent;
+    border-top: 10px solid #666666;
+    top: calc(10px/3);
+    left: calc(10px/-2);
+
+}
+/************
+ */
+div.produto_avaliacao span.ativo{
+    border-left: calc(10px/2) solid transparent;
+    border-right: calc(10px/2) solid transparent;
+    border-bottom: 10px solid #f2c832;
+ }
+div.produto_avaliacao span.ativo::before{
+    border-left: calc(10px/2) solid transparent;
+    border-right: calc(10px/2) solid transparent;
+    border-top: 10px solid #f2c832;
+}
+ 
+div.produto_preco span{
+    display: block;
+    font-weight: bold;
+    color: #535353;
+    text-decoration: line-through;
+    font-size: 13px;
+
+}
+div.produto_preco strong{
+    font-size: 20px;
+    margin: 4px 0 6px;
+    display: block;
+}
+
+div.produto_preco p{
+    color: #535353;
+    font-size: 13px;
+
+}
+button.produto_adicionar_carrinho{
+    display: block;
+    width: 90%;
+    height: 40px;
+    border: none;
+    background-color: #39b701;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0 auto;
+    font-weight: 600;
+    position: absolute;
+    bottom: 10px;
+    cursor: pointer;
+
+}
+ul.produtos_lista{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+h3{
+    text-align:center;
+}
+
+/* EXTRAS */
+
+/* para estilizar a scrollbar */
+::-webkit-scrollbar{}
+::-webkit-scrollbar-button{}
+::-webkit-scrollbar-track{}
+::-webkit-scrollbar-track-piece{}
+::-webkit-scrollbar-thumb{}
+::-webkit-scrollbar-corner{}
+::-webkit-resizer{}
+
+/* EXTRAS */
+  
+/* MEDIA QUERIES */
+    @media screen and (min-width: 400px) {}
+  
+    @media screen and (min-width: 800px) {
+
+    .container-flex{
+        display: flex;
+        align-items: center;
+    }
+    header .col-flex.logo{
+        width: 240px;
+    }
+    header .col-flex.logo h1{
+       color: #fff;
     }
     header .col-flex.menu{
 
@@ -95,23 +273,29 @@ header{
                     color:#000;
                     transition: 0.1s;
                 }
-    
+                header div.menuMobil{
+                    display:none;
+                }
 
-/* EXTRAS */
+ul.produtos_lista{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
 
-/* para estilizar a scrollbar */
-::-webkit-scrollbar{}
-::-webkit-scrollbar-button{}
-::-webkit-scrollbar-track{}
-::-webkit-scrollbar-track-piece{}
-::-webkit-scrollbar-thumb{}
-::-webkit-scrollbar-corner{}
-::-webkit-resizer{}
-
-/* EXTRAS */
-  
-/* MEDIA QUERIES */
-    @media screen and (min-width: 400px) {}
-  
-    @media screen and (min-width: 800px) {}
+}
+h3 {
+    text-align:start;
+    }
+}
+.rodape {
+    text-align: center;
+    background-color: #000000;
+    color: #F2FFFC;
+    padding: 0px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    opacity: 0.80;
+    box-sizing: border-box;
+}
 /* MEDIA QUERIES */
